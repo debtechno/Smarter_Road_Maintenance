@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>Smarter_Road_Maintenance</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	 <!--  <filter>
+	<filter-name>LoginFilter</filter-name>
+	<filter-class>/filters/LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>LoginFilter</filter-name>
+	<url-pattern>/Login.do</url-pattern>
+	<servlet-name>Login</servlet-name>
+	</filter-mapping> -->
+	
+	<!-- <servlet>
+	<servlet-name>SelectOption</servlet-name>
+	<servlet-class>Servlet.SelectMembershipType</servlet-class>
+	</servlet>
+	  <servlet-mapping>
+	<servlet-name>SelectOption</servlet-name>
+	<url-pattern>/SelectOption.do</url-pattern>
+	</servlet-mapping>-->
+	<servlet>
+	<servlet-name>Login</servlet-name>
+	<servlet-class>Servlet.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>Login</servlet-name>
+	<url-pattern>/Login.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>Citizen</servlet-name>
+	<servlet-class>Servlet.Citizen</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>Citizen</servlet-name>
+	<url-pattern>/Citizen.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>DbTest</servlet-name>
+	<servlet-class>Servlet.DbTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>DbTest</servlet-name>
+	<url-pattern>/DbTest</url-pattern>
+	</servlet-mapping>
+	<session-config>
+	<session-timeout>1</session-timeout>
+	</session-config>
+	</web-app>
