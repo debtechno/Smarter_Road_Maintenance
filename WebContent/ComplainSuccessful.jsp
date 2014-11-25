@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Complain status</title>
 </head>
 <body>
 <h1>Your complain is successfully logged</h1>
-<h2>Complain id:</h2>
+<h2><a href="CitizenHome.jsp">Do you want to log another complain?</a></h2>
 </body>
 </html>

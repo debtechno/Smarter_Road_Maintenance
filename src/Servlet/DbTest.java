@@ -45,7 +45,10 @@ public class DbTest extends HttpServlet {
 		Connection con = db.doConnection();
 		PrintWriter out=res.getWriter();
 		try{
-		PreparedStatement ps=con.prepareStatement("insert into DEBABRATA_MUKHERJEE_IN_IBM_COM.dbtest(fn,ln) values(s1,s2)");
+		PreparedStatement ps=con.prepareStatement("insert into DEBABRATA_MUKHERJEE_IN_IBM_COM.dbtest(fn,ln) values(?,?)");
+		ps.setString(1, s1);
+		ps.setString(2, s2);
+
 		int i=ps.executeUpdate();
 		System.out.println("Update Successful");
 		out.println("The values are successfully inserted into the table");
