@@ -9,5 +9,6 @@
 <body>
 <h1>Your complain is successfully logged</h1>
 <h2><a href="CitizenHome.jsp">Do you want to log another complain?</a></h2>
+<h2><br><br><a href="Login.jsp">Logout</a></h2>
 </body>
 </html>

@@ -1,7 +1,7 @@
 package Servlet;
 
 import java.io.*;
-
+import javax.mail.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -39,12 +39,14 @@ public class Citizen extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		ComplainDao cd= new ComplainDao();
+		//ComplainDao cd= new ComplainDao();
 		
 		String complains=request.getParameter("NewComplain");
 		String un=request.getParameter("user_name");
 		String sev=request.getParameter("severity");
 		String sm=request.getParameter("summary");
+		String email=request.getParameter("email");
+		
 		
 		count++;
 		
@@ -55,6 +57,7 @@ public class Citizen extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
+		out.println("<h1>Welcome "+un+"</h1>");
 		out.println("<h1>Hi "+un+" Your complain is successfully logged with Summary="+sm+"</h1><br><br>");
 		DbConnection db=new DbConnection();
 		Connection con = db.doConnection();
@@ -76,9 +79,10 @@ public class Citizen extends HttpServlet {
 			catch(Exception e){
 				e.printStackTrace();
 			}
-		//out.println("<h1>Your complain is added to the database <br>");	
-		
-		
+		out.println("<h1>Your complain is added to the database <br>");	
+		/*SendEmail se=new SendEmail();
+		se.sendMail(email);
+		out.println("An email is successfully sent to your id please check your inbox ");*/
 		RequestDispatcher view=request.getRequestDispatcher("ComplainSuccessful.jsp");
 		view.forward(request, response);
 	}

@@ -8,7 +8,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import model.Credentials;
 import model.DbConnection;
 
 /**
@@ -43,13 +42,17 @@ public class Login extends HttpServlet {
 		m.put("kmda", "kmda123");
 		m.put("pwd", "pwd123");
 		m.put("LandT", "lt123");
-		/*HttpSession session=request.getSession();
-		String sid=session.getId();	
-		session.setAttribute("Active Session ", sid);*/
 		if((m.containsKey(un))&&(m.containsValue(pw))){
+			HttpSession session=request.getSession();
+			String sessionId=session.getId();
+			//session.setAttribute("yes", un);
+			//System.out.println("active : "+session.getAttribute("yes"));
+			System.out.println(sessionId);
 			RequestDispatcher view=request.getRequestDispatcher("Logon.jsp");
 			view.forward(request, response);
-		}
+			}
+			
+		
 		else{
 			RequestDispatcher view=request.getRequestDispatcher("Error.jsp");
 			view.forward(request, response);

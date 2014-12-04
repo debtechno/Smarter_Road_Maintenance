@@ -3,6 +3,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- <%@page import="com.ibm.beans.UserBean" %>--%>
 <%@page import="java.sql.*" %>
+<%--<% HttpSession nsession = request.getSession(false);
+if(nsession!=null) {
+   String data=(String)session.getAttribute( "yes" );
+   out.println(data);
+}
+else
+  out.println("Session is not active");
+  %>
+  <%=session.getId()%>--%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -43,8 +52,9 @@ if (y==null || y=="")
 <tr><td>User name:</td><td><input type="text" name="user_name" id="un"></td></tr>
 <tr><td>Complain Summary:</td><td><input type="text" name="summary" id="sm"></td></tr>
 <tr><td align="right">New Complain:</td>
-						<td><textarea name="NewComplain" id="compl"></textarea></td></tr>
-				<tr><td>Severity:</td><td><input type="text" name="severity" id="sev"></td></tr>	
+						<td><textarea name="Complain detail" id="compl"></textarea></td></tr>
+				<tr><td>Severity:</td><td><input type="text" name="severity" id="sev"></td></tr>
+				<tr><td>email:</td><td><input type="text" name="email"></td></tr>
 				<tr><td><input type="submit" value="Submit"></td>
 				<td><input type="reset" value="Cancel"></td></tr> 
 </table>
@@ -61,7 +71,7 @@ if (y==null || y=="")
 <form action="Citizen">
 <input type="hidden" name="type" value="Status"> 
 <input type="submit" value="Check Status" size=""> 
-<br><br><form action="Logout.jsp"><input type="submit" value="Logout"></form>
+<h2><br><br><a href="Login.jsp">Logout</a></h2>
 </form><br>
 </center>
 </body>

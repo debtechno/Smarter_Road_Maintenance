@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Log in page</title>
 </head>
-<body>
+<body bgcolor="pink">
 <h1><marquee>Welcome to smarter roads in Kolkata</marquee></h1>
-<img src="file:///C:\MyProjects\Smarter_Road_Maintenance\Kolkata.jpg"></img>
+<img width=40% src="file:///C:\MyProjects\Smarter_Road_Maintenance\Kolkata.jpg"></img>
 <script>
 function validateForm()
 {
@@ -27,6 +27,7 @@ if (y==null || y=="")
   return false;
   }
 }</script>
+<%--<%=session.getId()--%>
 <br><br>
 <form method="post" action="Login.do" name="myForm" onsubmit="return validateForm()">
 <h2>Give your login details here:</h2>
