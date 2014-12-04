@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Log in page</title>
 </head>
-<body bgcolor="pink">
-<h1><marquee>Welcome to smarter roads in Kolkata</marquee></h1>
-<img width=40% src="file:///C:\MyProjects\Smarter_Road_Maintenance\Kolkata.jpg"></img>
+<body bgcolor="pink" >
+<center><h1><marquee>Welcome to Smarter Road Maintenance in Kolkata</marquee></h1>
+<img width=70% src="file:///C:\MyProjects\Smarter_Road_Maintenance\Kolkata.jpg"></img>
 <script>
 function validateForm()
 {
@@ -40,5 +40,6 @@ Password:<input name="password" id="pw" type="password"><br><br>
 </form>
 <br><br>
 <a href="Registration.jsp">Not Registered yet?</a>
+</center>
 </body>
 </html>
